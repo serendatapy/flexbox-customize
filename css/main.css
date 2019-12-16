@@ -131,8 +131,10 @@ body {
   line-height: 1.5em;
   border-radius: 10px;
   padding: 0px 30px;
-  width: 300px;
-  height: 300px;
+  
+  /*width and height were 300px*/
+  width: 15em;
+  height: 15em;
 }
 
 #content p span {
@@ -224,6 +226,7 @@ body {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
+
     /* Style adjustments for viewports that meet the condition */
 }
 
