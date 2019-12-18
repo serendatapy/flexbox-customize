@@ -117,9 +117,10 @@ body {
   width: 100%;
 }
 
-#content {
+.content {
   /* set the display to flex and use the justify-content & align-items properties to center the text within the div*/
   align-content: center;
+  align-items: stretch;
   background: #222;
   background:rgba(0,0,0,0.7);
   color: #fff;
@@ -130,17 +131,44 @@ body {
   justify-content: center;
   line-height: 1.5em;
   border-radius: 10px;
-  padding: 0px 30px;
+  padding: 15px 10px;
   
   /*width and height were 300px*/
-  width: 15em;
-  height: 15em;
+  width: 90%;
+  max-width: 425px;
+  /*removing the height allows the box to adapt to circumstances*/
+  /*height: 15em;*/
+
+  /*allows elements to go below 
+  if they exceed containers possibilities like text wrap*/
+  flex-wrap: wrap;
 }
 
-#content p span {
+.content p span {
   font-family: 'Lora', sans-serif;
 }
 
+#content-1 {
+    background: #d76f72;
+    border-radius: 10px;
+    margin: 0.25em;
+    padding: 0px 30px;
+    width: 15em;
+}
+#content-2 {
+    background: #cacec6;
+    border-radius: 10px;
+    margin: 0.25em;
+    padding: 0px 30px;
+    width: 15em;
+}
+#content-3 {
+    background: #64b6ac;
+    border-radius: 10px;
+    margin: 0.25em;
+    padding: 0px 30px;
+    width: 15em;
+}
 
 
 
@@ -229,8 +257,12 @@ body {
 /* Change the background colors below */
 
 @media (min-width: 768px) {
-    #content {
-        font-size: 2em;
+    .content {
+        font-size: 1.1em;
+        max-width: 770px;
+    }
+    #content-3 {
+        width: 34.5em;
     }
     
   }
@@ -238,16 +270,17 @@ body {
   
   /*---------- Desktops ----------*/
   @media (min-width: 1200px) {
-    #content {
-        font-size: 2.5em;
+    .content {
+        font-size: 1.3em;
+        width: 96%;
+        max-width: 1200px;
+    }
+    #content-3 {
+        width: 15em;
     }
      
   }
   
-
-
-
-
 
 @media only screen and (min-width: 35em) {
 
